@@ -8,7 +8,7 @@ interface Props {
 	entitiesType: string;
 }
 
-const placeholderPoster = require('../assets/placeholder.png');
+const placeholderPoster = require('../../assets/placeholder.png');
 
 export class Card extends PureComponent<Props> {
 	render() {

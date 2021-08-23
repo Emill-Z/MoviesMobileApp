@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Dimensions, View, Text, ScrollView } from 'react-native';
+import { Dimensions, View, ScrollView } from 'react-native';
 import { SliderBox } from 'react-native-image-slider-box';
-import { List } from '../components/List';
-import { EntitiesType, Movie } from '../models/movies';
-import { getFamilyMovies, getPopular, getUpcoming } from '../services/http/movies';
-import { Color } from '../themes/theme';
+import { List } from '../../common/components/List';
+import { getFamilyMovies, getPopular, getUpcoming } from '../../common/services/http/movies';
+import { EntitiesType, Movie } from '../../common/models/movies';
+import { stylesSheet } from './styles';
 
 const Home = ({ navigation }) => {
 	const dimensions = Dimensions.get('screen');
@@ -36,14 +36,14 @@ const Home = ({ navigation }) => {
 	}
 
 	return (
-		<ScrollView style={styles.container}>
+		<ScrollView style={stylesSheet.container}>
 			<View>
 				<SliderBox
 					autoplay
 					circleLoop
 					sliderBoxHeight={dimensions.height / 1.7}
 					images={sliderImages.map((i: Movie) => `https://image.tmdb.org/t/p/w500${i.poster_path}`)}
-					dotStyle={styles.dotSlider}
+					dotStyle={stylesSheet.dotSlider}
 					onCurrentImagePressed={(index: number) => onCurrentImagePressed(index)}
 				/>
 			</View>
@@ -75,23 +75,9 @@ const Home = ({ navigation }) => {
 				/>
 			</View>
 
-			<View style={styles.bottomSpace} />
+			<View style={stylesSheet.bottomSpace} />
 		</ScrollView>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		backgroundColor: Color.Black,
-	},
-	dotSlider: {
-		width: 0,
-		height: 0,
-	},
-
-	bottomSpace: {
-		paddingBottom: 70,
-	},
-});
 
 export default Home;

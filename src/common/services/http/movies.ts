@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AxiosMoviesResponse, EntitiesType } from '../../models/movies';
+import { EntitiesType, AxiosMoviesResponse } from '../../models/movies';
 
 /**
  * Credentials

@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
-import Home from '../screens/Home';
-import Detail from '../screens/Detail';
-import HeaderNavigationDetail from './HeaderNavigationDetail';
+import Home from '../../screens/home/Home';
+import Detail from '../../screens/detail/Detail';
+// import HeaderNavigationDetail from './HeaderNavigationDetail';
 import HeaderNavigationHome from './HeaderNavigationHome';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Search from '../screens/Search';
+import Search from '../../screens/search/Search';
 
 const Stack = createNativeStackNavigator();
 

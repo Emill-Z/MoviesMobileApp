@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, Text, View, VirtualizedList } from 'react-native';
 import { CardEntity } from '../models/card';
-import { Color } from '../themes/theme';
+import { Color } from '../core/themes/theme';
 import { Card } from './Card';
 
 interface Props {

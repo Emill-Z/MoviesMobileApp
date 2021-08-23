@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import { Dimensions, Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Color } from '../themes/theme';
+import { Color } from '../core/themes/theme';
 
 const dimensions = Dimensions.get('screen');
 
-const logo = require('../assets/logo.png');
+const logo = require('../../assets/logo.png');
 
 interface Props {
 	navigation: any;

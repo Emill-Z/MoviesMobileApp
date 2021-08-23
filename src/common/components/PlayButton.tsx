@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Color } from '../themes/theme';
+import { Color } from '../core/themes/theme';
 
-const playIcon = require('../assets/icon-play-white.png');
+const playIcon = require('../../assets/icon-play-white.png');
 
 interface Props {
 	handlePress(): void;
