@@ -1,2 +1,0 @@
-# MoviesMobileApp
-React-Native (ios)
